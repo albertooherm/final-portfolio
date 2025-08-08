@@ -1,0 +1,147 @@
+{
+  "navigation": {
+    "designerName": "Alberto Hermosillo",
+    "projects": "Projects",
+    "about": "About",
+    "play": "Play"
+  },
+  "hero": {
+    "title": "I craft interfaces",
+    "subtitle": "Frontend Developer",
+    "description": "Frontend developer with 4+ years building scalable web and mobile products with React, React Native and Next.js. I collaborate with design & backend, drive quality with testing/CI, and deliver user‑centric features in Agile teams.",
+    "cta": "See my work",
+    "typewriter": [
+      "I build scalable web & mobile products.",
+      "I optimize performance & DX.",
+      "I lead delivery with React & TypeScript.",
+      "I turn ideas into production-ready features."
+    ]
+  },
+  "about": {
+    "title": "About",
+    "profile": {
+      "name": "Alberto Maximiliano Hermosillo Sandoval",
+      "title": "Frontend Developer",
+      "location": "Chetumal, Quintana Roo, MX",
+      "bio": [
+        "Frontend developer with 4+ years delivering scalable web and mobile solutions using React, React Native, and TypeScript.",
+        "I specialize in building user-centric products, performance optimization, and driving features from concept to production in Agile teams.",
+        "I collaborate closely with design and backend teams, contribute to code quality with testing and CI/CD, and enjoy creating reusable component systems."
+      ],
+      "cvLink": "View CV",
+      "cvUrl": "/cv-en.pdf"
+    },
+    "workExperience": {
+      "title": "Professional Experience",
+      "viewDetails": "View details"
+    }
+  },
+  "projects": {
+    "title": "Selected projects",
+    "viewAll": "View all projects",
+    "tryItOut": "Try it out"
+  },
+  "articles": {
+    "title": "Articles",
+    "viewAll": "View all articles",
+    "readMore": "Read more"
+  },
+  "footer": {
+    "contact": "Contact",
+    "copyright": "© 2024 {name}. Built with Next.js, shadcn/ui & Framer Motion"
+  },
+  "data": {
+    "workExperience": [
+      {
+        "id": "emtech",
+        "title": "Lead Frontend Developer",
+        "company": "Emtech Institute",
+        "product": "Education technology projects",
+        "description": "Led frontend strategy and delivery for scalable React/Next.js apps. Coordinated cross‑functional teams, ensured code quality with Jest, and aligned stakeholders for high‑impact initiatives (Bimbo, Walmart).",
+        "dateRange": "Jan 2025 – Present",
+        "isCurrent": true,
+        "location": "Los Angeles, CA (Remote)",
+        "tags": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Jest", "GitHub Flow", "Agile", "Scrum", "Stakeholder mgmt", "Monday"]
+      },
+      {
+        "id": "femsa",
+        "title": "Middle Mobile Developer",
+        "company": "Digital@FEMSA",
+        "product": "OXXO Spin Premia App",
+        "description": "Implemented new features and maintained the Spin Premia app in a monorepo. Collaborated with design, improved quality with SonarCloud, testing with Jest, and CI/CD in Bitrise.",
+        "dateRange": "Jul 2023 – Dec 2024",
+        "isCurrent": false,
+        "location": "Monterrey, NL (Hybrid)",
+        "tags": ["React Native", "TypeScript", "Figma", "Monorepo", "Scrum", "Jest", "SonarCloud", "Bitrise (CI/CD)"]
+      },
+      {
+        "id": "ibuild",
+        "title": "Frontend Developer",
+        "company": "iBUILD Global, Inc",
+        "product": "Construction digitization platform",
+        "description": "Optimized and built features in React and React Native to connect users and providers. Built reusable components, integrated APIs, and ensured responsive performance across devices.",
+        "dateRange": "Sep 2022 – Jul 2023",
+        "isCurrent": false,
+        "location": "Washington, D.C. (Remote)",
+        "tags": ["React", "React Native", "APIs", "Reusable components", "Responsive", "UX/UI", "Scrum"]
+      },
+      {
+        "id": "cotemar",
+        "title": "Frontend Developer",
+        "company": "COTEMAR, S.A. de C.V.",
+        "product": "Maritime operations apps",
+        "description": "Developed web/mobile apps, dashboards and data visualizations to support real‑time decisions. Improved reliability, added secure auth and role‑based access, and coordinated Agile delivery.",
+        "dateRange": "Apr 2022 – Aug 2022",
+        "isCurrent": false,
+        "location": "Mérida, YUC",
+        "tags": ["React", "React Native", "Dashboards", "Data Viz", "Auth", "RBAC", "Agile"]
+      }
+    ],
+    "projects": [
+      {
+        "id": "p1",
+        "title": "Rewards Dashboard",
+        "description": "Curated rewards experience with personalization and performance tuning.",
+        "dateRange": "2024",
+        "tags": ["Next.js", "TypeScript", "Tailwind CSS"],
+        "image": "/images/projects/project-1.jpg",
+        "link": "#"
+      },
+      {
+        "id": "p2",
+        "title": "Spin Premia Mobile",
+        "description": "Feature delivery and quality improvements in React Native monorepo.",
+        "dateRange": "2023 – 2024",
+        "tags": ["React Native", "Jest", "Bitrise"],
+        "image": "/images/projects/project-2.jpg",
+        "link": "#"
+      },
+      {
+        "id": "p3",
+        "title": "Construction Marketplace",
+        "description": "React/React Native features to connect users and providers efficiently.",
+        "dateRange": "2022 – 2023",
+        "tags": ["React", "APIs", "Reusable components"],
+        "image": "/images/projects/project-3.jpg",
+        "link": "#"
+      },
+      {
+        "id": "p4",
+        "title": "Maritime Dashboards",
+        "description": "Real‑time dashboards and data visualizations for operations.",
+        "dateRange": "2022",
+        "tags": ["React", "Data Viz", "Auth"],
+        "image": "/images/projects/project-4.jpg",
+        "link": "#"
+      }
+    ],
+    "articles": [
+      
+    ],
+    "socialLinks": [
+      { "name": "GitHub", "url": "https://github.com/albertooherm", "icon": "github" },
+      { "name": "LinkedIn", "url": "https://www.linkedin.com/in/alberto-hermosillo/", "icon": "linkedin" },
+      { "name": "Email", "url": "mailto:albertoherms17@gmail.com", "icon": "mail" }
+    ]
+  }
+}

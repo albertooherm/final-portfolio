@@ -1,26 +1,210 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-fira-code);
+  --font-mono: var(--font-fira-code);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --radius: 0.625rem;
+  --background: #ffffff;
+  --foreground: #222223;
+  --card: #ffffff;
+  --card-foreground: #222223;
+  --popover: #ffffff;
+  --popover-foreground: #222223;
+  --primary: #222223;
+  --primary-foreground: #ffffff;
+  --secondary: #f8f9fa;
+  --secondary-foreground: #222223;
+  --muted: #f8f9fa;
+  --muted-foreground: #6c757d;
+  --accent: #f8f9fa;
+  --accent-foreground: #222223;
+  --destructive: #dc3545;
+  --border: #e9ecef;
+  --input: #e9ecef;
+  --ring: #222223;
+  --chart-1: #222223;
+  --chart-2: #6c757d;
+  --chart-3: #495057;
+  --chart-4: #343a40;
+  --chart-5: #212529;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #222223;
+  --sidebar-primary: #222223;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f8f9fa;
+  --sidebar-accent-foreground: #222223;
+  --sidebar-border: #e9ecef;
+  --sidebar-ring: #222223;
+}
+
+.dark {
+  --background: #222223;
+  --foreground: #ffffff;
+  --card: #222223;
+  --card-foreground: #ffffff;
+  --popover: #222223;
+  --popover-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #222223;
+  --secondary: #2a2a2b;
+  --secondary-foreground: #ffffff;
+  --muted: #2a2a2b;
+  --muted-foreground: #adb5bd;
+  --accent: #2a2a2b;
+  --accent-foreground: #ffffff;
+  --destructive: #e74c3c;
+  --border: #343a40;
+  --input: #343a40;
+  --ring: #ffffff;
+  --chart-1: #ffffff;
+  --chart-2: #adb5bd;
+  --chart-3: #ced4da;
+  --chart-4: #dee2e6;
+  --chart-5: #f8f9fa;
+  --sidebar: #222223;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #222223;
+  --sidebar-accent: #2a2a2b;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #343a40;
+  --sidebar-ring: #ffffff;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
+  body {
+    @apply bg-background text-foreground;
+    font-family:
+      var(--font-fira-code), "Fira Code", ui-monospace, SFMono-Regular, Menlo,
+      Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Smooth transitions for theme switching */
+  * {
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  /* Ensure all text uses Fira Code */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  div,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    font-family:
+      var(--font-fira-code), "Fira Code", ui-monospace, SFMono-Regular, Menlo,
+      Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  /* Responsive improvements */
+  .container {
+    @apply w-full mx-auto px-4;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      @apply px-6;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      @apply px-8;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      @apply px-12;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      @apply px-16;
+    }
+  }
+
+  /* Prevent horizontal scroll on mobile */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Better touch targets for mobile */
+  button,
+  a {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+
+  /* Improve text readability on small screens */
+  @media (max-width: 640px) {
+    p {
+      @apply leading-relaxed;
+    }
+
+    h1,
+    h2,
+    h3 {
+      @apply leading-tight;
+    }
+  }
 }
