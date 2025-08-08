@@ -23,6 +23,8 @@ const Hero = () => {
 
   const social = (t("data.socialLinks") as unknown as { name: string; url: string; icon: string }[]) || [];
   const cvUrl = (t("about.profile.cvUrl") as string) || "/cv.pdf";
+  const heroDescription = (t("hero.description") as string) || "";
+  const cvLinkText = (t("about.profile.cvLink") as string) || "View CV";
 
   return (
     <section className="py-24 sm:py-32 lg:py-40 font-sans bg-white dark:bg-[#222223]">
@@ -64,7 +66,7 @@ const Hero = () => {
             animate={controls}
             transition={{ delay: 0.4 }}
           >
-            {t("hero.description")}
+            {heroDescription}
           </motion.p>
 
           {/* Social Links */}
@@ -106,7 +108,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center text-[#222223]/70 dark:text-white/70 hover:text-[#222223] dark:hover:text-white transition-colors group font-sans underline underline-offset-4"
             >
-              {t("about.profile.cvLink")}
+              {cvLinkText}
               <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
