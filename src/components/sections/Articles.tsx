@@ -5,16 +5,25 @@ import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+// Local type to avoid any
+type Job = {
+  title: string;
+  company: string;
+  description: string;
+  dateRange: string;
+  location: string;
+};
+
 const WorkExperience = () => {
   const animation = useScrollAnimation();
   const { t } = useLanguage();
 
   // Get work experience data from translations
-  const getWorkExperienceData = () => {
+  const getWorkExperienceData = (): Job[] => {
     try {
-      const workData = t("sampleData.workExperience");
-      return Array.isArray(workData) ? workData : [];
-    } catch (error) {
+      const workData = t("data.workExperience") as unknown;
+      return Array.isArray(workData) ? (workData as Job[]) : [];
+    } catch {
       return [];
     }
   };
@@ -22,7 +31,7 @@ const WorkExperience = () => {
   const workExperience = getWorkExperienceData();
 
   // Fallback data if no work experience is found
-  const fallbackWorkExperience = [
+  const fallbackWorkExperience: Job[] = [
     {
       title: "Senior UI/UX Designer",
       company: "TechCorp Inc.",
@@ -73,9 +82,9 @@ const WorkExperience = () => {
         </motion.div>
 
         <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
-          {displayWorkExperience.map((job: any, index: number) => (
+          {displayWorkExperience.map((job: Job, index: number) => (
             <motion.article
-              key={job.title}
+              key={`${job.title}-${index}`}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
